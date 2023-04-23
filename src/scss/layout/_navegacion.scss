@@ -6,6 +6,16 @@
         flex-direction: row;
         justify-content: space-between;
     }
+    a {
+        display: flex;
+        align-items: flex-end;
+        span{
+            font-size: 3rem;
+            color: gold;
+            margin: 0;
+            padding: 0;
+        }
+    }
 }
 
 .navegacion{
