@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function eventListeners(){
     const mobileMenu = document.querySelector(".mobile-menu");
-    mobileMenu.addEventListener("click", navegacionResponsive)
+    const botonCerrar = document.querySelector("#boton-cerrar");
+    mobileMenu.addEventListener("click", navegacionResponsive);
+    botonCerrar.addEventListener("click", cerrarModal);
 }
 
 function navegacionResponsive(){ 
@@ -16,4 +18,7 @@ function navegacionResponsive(){
         navegacion.classList.add("mostrar");
     }
 
+}
+function cerrarModal(){
+    console.log("Cerrar modal, pipo es el mejor");
 }

@@ -1,6 +1,7 @@
 .barra{
     display: flex;
     flex-direction: column;
+    position: relative;
     padding-top: 3rem;
     align-items: center;
     @include tablet {
@@ -40,6 +41,42 @@
         }
     }
 }
+.navegacion-mobil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    opacity: .85;
+    top: 0;
+    background-color: black;
+    @include tablet{
+        display: none;
+    }
+    a{
+        display: block;
+        color: $blanco;
+        text-decoration: none;
+        font-size: 3rem;
+        z-index: 10;
+    }
+}
+.navegacion-mobil-boton{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+
+    button{
+        display: block;
+        font-size: 30px;
+        color: white;
+        background-color: transparent;
+        opacity: .7;
+        border: none;
+    }
+}
 
 /*  Menú de Hamburguesa   */
 .mobile-menu{
@@ -49,5 +86,9 @@
     width: 5rem;
 }
 .mostrar{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+    }
 }
