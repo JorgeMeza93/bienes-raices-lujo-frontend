@@ -11,4 +11,11 @@
         color: $blanco;
         margin-bottom: 0;
     }
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            flex-direction: row;
+        }
+    }
 }
