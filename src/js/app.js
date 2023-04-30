@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     eventListeners();
+    darkMode();
 });
 
 function eventListeners(){
@@ -10,7 +11,7 @@ function eventListeners(){
 }
 
 function navegacionResponsive(){ 
-    const navegacion =  document.querySelector(".navegacion");
+    const navegacion =  document.querySelector(".navegacion-mobil");
     if(navegacion.classList.contains("mostrar")){
         navegacion.classList.remove("mostrar")
     }
@@ -20,5 +21,12 @@ function navegacionResponsive(){
 
 }
 function cerrarModal(){
-    console.log("Cerrar modal, pipo es el mejor");
+    const navegacion =  document.querySelector(".navegacion-mobil");
+    navegacion.classList.remove("mostrar");
+}
+function darkMode(){
+   const botonDarkMode = document.querySelector(".dark-mode-boton");
+   botonDarkMode.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+   })
 }

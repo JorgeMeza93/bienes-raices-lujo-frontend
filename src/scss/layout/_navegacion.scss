@@ -7,6 +7,7 @@
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
     }
     a {
         display: flex;
@@ -42,16 +43,21 @@
     }
 }
 .navegacion-mobil{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100vh;
     width: 100vw;
-    position: absolute;
-    opacity: .85;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    opacity: .88;
     background-color: black;
+    z-index: 1;
     @include tablet{
         display: none;
     }
@@ -87,8 +93,28 @@
 }
 .mostrar{
     display: flex;
-    flex-direction: column;
     @include tablet{
         flex-direction: row;
     }
+}
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet{
+        align-items: flex-end   ;
+    }
+    .dark-mode-boton{
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        filter: invert(100%);
+        &:hover{
+            cursor: pointer;
+        }
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+
 }
