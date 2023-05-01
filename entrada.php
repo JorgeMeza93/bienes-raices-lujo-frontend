@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raíces</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header class="header">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="/">
-                    <img src="build/img/logo.svg" alt="">
-                </a>
-                <nav class="navegacion">
-                    <a href="nosotros.php">Nosotros</a>
-                    <a href="anuncios.php">Anuncios</a>
-                    <a href="blog.php">Blog</a>
-                    <a href="contacto.php">Contacto</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+<?php include "includes/templates/header.php";?>
     <main class="contenedor seccion contenido-centrado">
         <h1>Consejos para construir una terraza en el techo de tu casa con los mejores materiales y ahorrando dinero</h1>
         <picture>
@@ -38,17 +14,4 @@
             explicabo atque! Dolorem libero consectetur corrupti id delectus maiores expedita. Maiores quasi maxime temporibus!
         </p>
     </main>
-    <footer class="footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.php">Nosotros</a>
-                <a href="anuncios.php">Anuncios</a>
-                <a href="blog.php">Blog</a>
-                <a href="contacto.php">Contacto</a>
-            </nav>
-        </div>
-        <p class="copyright">Todos los derechos reservados 2023 &copy;</p>
-    </footer>
-    <script src="build/js/bundle.min.js"></script>
-</body>
-</html>
+    <?php include "includes/templates/footer.php" ?>
