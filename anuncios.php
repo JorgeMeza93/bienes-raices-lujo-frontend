@@ -15,10 +15,10 @@
                     <img src="build/img/logo.svg" alt="">
                 </a>
                 <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
+                    <a href="nosotros.php">Nosotros</a>
+                    <a href="anuncios.php">Anuncios</a>
+                    <a href="blog.php">Blog</a>
+                    <a href="contacto.php">Contacto</a>
                 </nav>
             </div>
         </div>
@@ -50,7 +50,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
             <div class="anuncio">
@@ -77,7 +77,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
             <div class="anuncio">
@@ -104,7 +104,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
             <div class="anuncio">
@@ -131,7 +131,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
             <div class="anuncio">
@@ -158,7 +158,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
             <div class="anuncio">
@@ -185,7 +185,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
         </div>
@@ -193,10 +193,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.php">Nosotros</a>
+                <a href="anuncios.php">Anuncios</a>
+                <a href="blog.php">Blog</a>
+                <a href="contacto.php">Contacto</a>
             </nav>
         </div>
         <p class="copyright">Todos los derechos reservados 2023 &copy;</p>

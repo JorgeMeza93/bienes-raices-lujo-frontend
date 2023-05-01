@@ -20,20 +20,20 @@
                 <div class="derecha">
                     <img src="build/img/dark-mode.svg" alt="icono-dark-mode" class="dark-mode-boton">
                     <nav class="navegacion">
-                        <a href="nosotros.html">Nosotros</a>
-                        <a href="anuncios.html">Anuncios</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contacto.html">Contacto</a>
+                        <a href="nosotros.php">Nosotros</a>
+                        <a href="anuncios.php">Anuncios</a>
+                        <a href="blog.php">Blog</a>
+                        <a href="contacto.php">Contacto</a>
                     </nav>
                 </div>
                 <nav class="navegacion-mobil">
                     <div class="navegacion-mobil-boton">
                         <button id="boton-cerrar">X</button>
                     </div>
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
+                    <a href="nosotros.php">Nosotros</a>
+                    <a href="anuncios.php">Anuncios</a>
+                    <a href="blog.php">Blog</a>
+                    <a href="contacto.php">Contacto</a>
                 </nav>
             </div>
             <h1>Venta de Casas y Departamentos de Lujo</h1>
@@ -95,7 +95,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
             <div class="anuncio">
@@ -122,7 +122,7 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
             <div class="anuncio">
@@ -149,18 +149,18 @@
                             <p>4</p>
                         </li>
                     </ul>
-                    <a href="anuncios.html" class="boton boton-amarillo-block">Ver Propiedad</a>
+                    <a href="anuncios.php" class="boton boton-amarillo-block">Ver Propiedad</a>
                 </div>
             </div> <!--Anuncio-->
         </div>
         <div class="alinear-derecha">
-            <a href="anuncios.html" class="boton-verde">Ver Todas</a>
+            <a href="anuncios.php" class="boton-verde">Ver Todas</a>
         </div>
     </section>
     <section class="imagen-contacto">
         <h2>Encuentra la Casa de tus Sueños</h2>
         <p>Llena el formulario de contacto y pronto un asesor se pondrá en contacto contigo</p>
-        <a href="contacto.html" class="boton-amarillo">Contactanos</a>
+        <a href="contacto.php" class="boton-amarillo">Contactanos</a>
     </section>
     <section class="contenedor seccion seccion-inferior">
         <div class="blog">
@@ -174,7 +174,7 @@
                     </picture>
                 </div>
                 <div class="texto-entrada">
-                    <a href="entrada.html">
+                    <a href="entrada.php">
                         <h4>Terraza en el techo de tu casa</h4>
                         <p>Escrito el <span>12/10/2004</span> por: <span>Admin Manolo</span></p>
                         <p>
@@ -192,7 +192,7 @@
                     </picture>
                 </div>
                 <div class="texto-entrada">
-                    <a href="entrada.html">
+                    <a href="entrada.php">
                         <h4>Guía para el decorado Interior de tu hogar</h4>
                         <p>Escrito el <span>21/08/2007</span> por: <span>Admin Pipo</span></p>
                         <p>
@@ -215,10 +215,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.php">Nosotros</a>
+                <a href="anuncios.php">Anuncios</a>
+                <a href="blog.php">Blog</a>
+                <a href="contacto.php">Contacto</a>
             </nav>
         </div>
         <p class="copyright">Todos los derechos reservados 2023. Bienes Raíces Pipo &copy;</p>
