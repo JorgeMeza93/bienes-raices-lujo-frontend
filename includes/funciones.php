@@ -1,7 +1,7 @@
 <?php 
 
     function includeTemplate(string $nombre){
-        include "/includes/templates/" . $nombre . ".php";
+        include __DIR__ . "/templates/" . $nombre . ".php";
     }
 
 ?>
