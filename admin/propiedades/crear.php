@@ -1,4 +1,6 @@
-<?php 
+<?php
+    require "../../includes/config/database.php";
+    $db = conectarDB();
     require "../../includes/funciones.php";
     includeTemplate("header")
 ?>
@@ -32,6 +34,15 @@
             <label for="estacionamiento">Estacionamiento</label>
             <input type="number" id="estacionamiento" placeholder="Ejemplo: 1" min="1" max="5">
         </fieldset>
+        <fieldset>
+            <legend>Vendedor</legend>
+            <select>
+                <option value="1">Manolo</option>
+                <option value="2">Pipo</option>
+                <option value="3">Monstruo</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="Crear Propiedad" class="boton boton-verde">
     </form>
 </main>
 <?php
