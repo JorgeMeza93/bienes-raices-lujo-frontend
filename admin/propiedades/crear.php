@@ -11,7 +11,6 @@
     $banos = "";
     $estacionamiento = "";
     $vendedorId = "";
-    $creado = date("Y/m/d");
 
     if($_SERVER["REQUEST_METHOD"] === "POST"){
         $titulo = mysqli_real_escape_string($db, trim($_POST["titulo"]));
@@ -21,6 +20,8 @@
         $banos = mysqli_escape_string($db, trim($_POST["banos"]));
         $estacionamiento = mysqli_escape_string($db, trim($_POST["estacionamiento"]));
         $vendedorId = mysqli_escape_string($db, trim($_POST["vendedor"]));
+        $creado = date("Y/m/d");
+        $imagen = $_FILES("imagen");
         if(!$titulo){
             $errores[] = "Debes añadir un título";
         }
@@ -42,12 +43,21 @@
         if(!$vendedorId){
             $errores[] = "Debes elegir un vendedor";
         }
+        if(!$imagen["name"]){
+            $errores = "Debes asignar al menos una imagen de la propiedad";
+        }
+        //Tamaño maximo
+        $medida = 1000 * 700;
+        if($imagen["size"] > $medida){
+            $errores[] = "La imagen es muy pesada";
+        }
+
         //Si por lo menos hay un error en el array de errores no se ejecutara el siguiente código
         if(empty($errores)){
             $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, banos, estacionamiento, creado, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', 
-            '$habitaciones', '$banos', '$estacionamiento', $creado, '$vendedorId')";
-            $resultado = mysqli_query($db, $query);
-            if($resultado){
+            '$habitaciones', '$banos', '$estacionamiento', '$creado', '$vendedorId')";
+            $result = mysqli_query($db, $query);
+            if($result){
                 //Redireccionamiento
                 header("Location: /admin");
             }
@@ -96,7 +106,7 @@
             <legend>Vendedor</legend>
             <select name="vendedor">
                 <?php while($vendedor = mysqli_fetch_assoc($resultado)): ?>
-                    <option <?php echo $vendedorId === $vendedor["id"] ? "selected" : ""; ?> value="<?php $vendedor["id"] ?>"><?php echo $vendedor["nombre"] . " " . $vendedor["apellido"] ?></option>
+                    <option <?php echo $vendedorId === $vendedor["id"] ? "selected" : ""; ?> value="<?php echo $vendedor["id"] ?>"><?php echo $vendedor["nombre"] . " " . $vendedor["apellido"] ?></option>
                 <?php endwhile?>
             </select>
         </fieldset>
