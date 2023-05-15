@@ -21,7 +21,8 @@
         $estacionamiento = mysqli_escape_string($db, trim($_POST["estacionamiento"]));
         $vendedorId = mysqli_escape_string($db, trim($_POST["vendedor"]));
         $creado = date("Y/m/d");
-        $imagen = $_FILES("imagen");
+        $imagen = $_FILES["imagen"];
+
         if(!$titulo){
             $errores[] = "Debes añadir un título";
         }
@@ -47,14 +48,24 @@
             $errores = "Debes asignar al menos una imagen de la propiedad";
         }
         //Tamaño maximo
-        $medida = 1000 * 700;
+        $medida = 1000 * 1000;
         if($imagen["size"] > $medida){
             $errores[] = "La imagen es muy pesada";
         }
 
         //Si por lo menos hay un error en el array de errores no se ejecutara el siguiente código
         if(empty($errores)){
-            $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, banos, estacionamiento, creado, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', 
+            /*** Subida de archivos **+*/
+            //Crear carpeta
+            $carpetaImagenes = "../../imagenes/";
+            if(!is_dir($carpetaImagenes)){
+                mkdir($carpetaImagenes);
+            }
+            $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
+            //Almacenar la imagen 
+            move_uploaded_file($imagen["tmp_name"], $carpetaImagenes . $nombreImagen);
+
+            $query = "INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, banos, estacionamiento, creado, vendedores_id) VALUES ('$titulo', '$precio', '$nombreImagen','$descripcion', 
             '$habitaciones', '$banos', '$estacionamiento', '$creado', '$vendedorId')";
             $result = mysqli_query($db, $query);
             if($result){
@@ -75,7 +86,7 @@
             <?php echo $error ?>
         </div>
     <?php endforeach ?>
-    <form class="formulario" action="/admin//propiedades/crear.php" method="POST">
+    <form class="formulario" action="/admin//propiedades/crear.php" method="POST" enctype="multipart/form-data">
         <fieldset>
             <legend>Información General</legend>
             <label for="titulo">Título</label>
@@ -85,10 +96,10 @@
             <input type="number" name="precio" id="precio" placeholder="Precio Propiedad" value="<?php echo $precio ?>"/>
 
             <label for="imagen">Imagen de la Propiedad</label>
-            <input type="file" id="imagen" accept="image/jpeg, image/png">
+            <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen">
 
             <label for="descripcion">Descripción</label>
-            <textarea id="descripcion" name="descripcion"><?php echo $descripcion?></textarea>
+            <textarea id="descripcion" name="descripcion"><?php echo $descripcion; ?></textarea>
         </fieldset>
         <fieldset>
             <legend>Información de la Propiedad</legend>
